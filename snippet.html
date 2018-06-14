@@ -1,9 +1,12 @@
 <!-- https://github.com/mistermantas/hop-on-discord -->
+
+
+
 <script>
 var elements = document.querySelectorAll('.discord-dialog__close-button, .discord-dialog')
 for (var i = 0; i < elements.length; i++) {
   elements[i].addEventListener("click", function() {
-    document.querySelector('.discord-dialog').classList.toggle('active')
+    toggle('.discord-dialog')
   })
 }
 </script>
@@ -152,7 +155,6 @@ for (var i = 0; i < elements.length; i++) {
 .discord-button svg {
   height: 2rem;
   width: 2rem;
-  position: static;
 }
 
 .discord-button svg path {
@@ -195,11 +197,13 @@ for (var i = 0; i < elements.length; i++) {
   </div>
 
   <div class="discord-dialog__container">
-    <strong class="discord-dialog__strong-text">Hang out on our Discord! Talk to the community and get with the times!</strong>
+    <strong class="discord-dialog__strong-text">Hang out on our Discord! Talk to the community by text or on voice chat!</strong>
 
-    Discord is an all-in-one voice and text chat for gamers that’s free, secure, and works on both your desktop and phone. By clicking the button below, you will be invited to join the best Discord server in the whole wide world!</div>
+    Discord is an all-in-one voice and text chat for gamers that’s free, secure, and works on both your desktop and phone. This popup is powered by <a href="https://github.com/mistermantas/hop-on-discord">Hop on Discord</a>, feel free to give it a try once you set up your own Discord!
+
+  </div>
 
   <div class="discord-dialog__footer">
-    <a href="https://discordapp.com/invite/0sg9HNylRzK4SnCr" class="discord-dialog__btn">Accept invite</a>
+    <a href="https://discordapp.com/invite/0sg9HNylRzK4SnCr" class="discord-dialog__btn">Join now</a>
   </div>
 </div>
