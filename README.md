@@ -1,4 +1,4 @@
-![Promo image](https://raw.githubusercontent.com/mistermantas/hop-on-discord/v2/promo.png)
+![Promo image](https://raw.githubusercontent.com/mistermantas/hop-on-discord/master/promo.png)
 
 # Hop on Discord! ✌
 
