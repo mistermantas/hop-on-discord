@@ -12,44 +12,15 @@
     .row{display:flex}.col{flex:1}@media(max-width:48em){.row{flex-direction:column}.col{flex:0 0 auto}}
     @media(min-width:48em){.col-tenth{flex:0 0 10%}.col-fifth{flex:0 0 20%}.col-quarter{flex:0 0 25%}.col-third{flex:0 0 33.3333334%}.col-half{flex:0 0 50%}}
 
-    /* Font */
-    @font-face {
-      font-family: 'Whitney';
-      font-weight: normal;
-      src: url('font/book.tff') format('truetype');
-    }
-
-    @font-face {
-      font-family: 'Whitney';
-      font-weight: bold;
-      src: url('font/bold.tff') format('truetype');
-    }
-
     /* Base */
+    body { margin: 0; }
     html {
       background: #36393f;
       color: rgba(255, 255, 255, 0.7);
-      font: 14px/1.4 'Whitney', 'Roboto', sans-serif;
-      padding-top: 2rem;
+      font: 16px/1.4 'Whitney', 'Roboto', sans-serif;
     }
-
-    #app {
-      max-width: 60rem;
-      margin: 0 auto;
-      padding: 1rem;
-    }
-
-    #app .col { margin-right: 3rem; }
-    #app .col:last-child { margin-right: 0; }
 
     /* Elements */
-    h1 {
-      font-weight: normal;
-      color: #f6f6f7;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 1rem;
-    }
     a {
       color: #f6f6f7;
       text-decoration: none;
@@ -77,59 +48,73 @@
 
     select { padding-left: 0.25rem; padding-right: 0.75rem; }
 
-    /* Footer */
-    footer {
-      border-top: 0.1rem solid rgba(255, 255, 255, 0.125);
-      padding-top: 1rem;
-    }
-
-    footer a {
+    /* Links */
+    nav a:hover {
       opacity: 0.5;
-    }
-
-    footer a:hover {
-      opacity: 1;
     }
 
     small {
       display: block;
-      opacity: 0.75;
+      opacity: 0.8;
+    }
+
+    /* Nav */
+    nav {
+      padding: 6rem 3rem;
+      background: #7289da;
+      color: #fff;
+      min-height: 100vh;
+    }
+
+    nav small {
+      margin: 1rem 0;
+    }
+
+    h1 {
+      font-weight: normal;
+      color: #f6f6f7;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 3rem;
+      margin: 0;
+      line-height: 1;
+    }
+
+    /* Main */
+    main {
+      padding: 3rem 4rem;
+    }
+
+    h2 {
+      padding-bottom: 0.75rem;
+      color: #fff;
+      border-bottom: 0.25rem solid rgba(185,187,190,.1);
     }
     </style>
   </head>
   <body>
 
     <div id="app" class="row">
-      <section class="col">
-        <p>Have you ever wanted to link to a Discord server but never knew how to make it prominent enough or keep it light without loading too much crap?
-        Hop on Discord is a simple tool to add a floating action button that links to your Discord server, which looks very similiar to the UI of Discord.</p>
-
-        <p>Setting up Hop on Discord is easy and can be done on any website so long as you have Custom HTML support (that does not block JavaScript or CSS).</p>
-
-        <p>• <b>(1)</b> First of all, visit <a href="https://github.com/mistermantas/hop-on-discord/blob/master/snippet.html">this page</a>. Copy the source code from there to a text editor (like Notepad, Atom, Notepad++, Sublime, any of those).</p>
-        <p>• <b>(2)</b> To change the server URL, go to the very bottom (at line 203) and replace the placeholder URL (<code>https://discordapp.com/invite/0sg9HNylRzK4SnCr</code>) with your own.</p>
-        <p>• <b>(3)</b> Here you can also change the text of the buttons or the introductory text (<code>HANG OUT ON OUR DISCORD! TALK TO THE COMMUNITY BY TEXT OR ON VOICE CHAT!</code>).</p>
-        <p>• <b>(4)</b> Once you are done, just add it to your website.</p>
-
-        <p>If you need extra help or want a new feature, <a href="https://github.com/mistermantas/hop-on-discord/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">create an issue on GitHub</a>. Expect replies within a few days.</p>
-      </section>
-
-
-      <aside class="col-quarter">
+      <nav class="col-quarter">
         <h1>Hop on Discord</h1>
-
         <p>
-          <small>
-            • Very compact (~7kb uncompressed)<br>
-            • Simple to add &amp; tweak<br>
-            • Works everywhere<br>
-            • No dependencies<br>
-            • Minimal JavaScript<br>
-            • No tracking
-          </small>
+          Making your Discord server more accessible with a live chat style floating action button. It's quite FABulous. Get it? It's a pun. It's great. Like you, if you this. You should.
         </p>
 
-        <footer>
+        <div>
+          <a href="https://github.com/mistermantas/hop-on-discord/blob/master/snippet.html"><img alt="Github file size" src="https://img.shields.io/github/size/mistermantas/hop-on-discord/snippet.html.svg?style=flat-square" style="max-width:100%;"></a>
+
+          <a href="https://github.com/mistermantas/hop-on-discord/commits/master"><img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/mistermantas/hop-on-discord.svg?style=flat-square" style="max-width:100%;"></a>
+        </div>
+
+        <small>
+          <a href="https://github.com/mistermantas/hop-on-discord/blob/master/LICENSE.md">
+            Made by Mantas Vilčinskas<br>
+            Open source under MIT
+          </a>
+        </small>
+
+        <div>
           <a href="http://github.com/mistermantas">
             <svg class="icon" viewBox="0 0 24 24">
               <path d="M12,2A10,10 0 0,0 2,12C2,16.42 4.87,20.17 8.84,21.5C9.34,21.58 9.5,21.27 9.5,21C9.5,20.77 9.5,20.14 9.5,19.31C6.73,19.91 6.14,17.97 6.14,17.97C5.68,16.81 5.03,16.5 5.03,16.5C4.12,15.88 5.1,15.9 5.1,15.9C6.1,15.97 6.63,16.93 6.63,16.93C7.5,18.45 8.97,18 9.54,17.76C9.63,17.11 9.89,16.67 10.17,16.42C7.95,16.17 5.62,15.31 5.62,11.5C5.62,10.39 6,9.5 6.65,8.79C6.55,8.54 6.2,7.5 6.75,6.15C6.75,6.15 7.59,5.88 9.5,7.17C10.29,6.95 11.15,6.84 12,6.84C12.85,6.84 13.71,6.95 14.5,7.17C16.41,5.88 17.25,6.15 17.25,6.15C17.8,7.5 17.45,8.54 17.35,8.79C18,9.5 18.38,10.39 18.38,11.5C18.38,15.32 16.04,16.16 13.81,16.41C14.17,16.72 14.5,17.33 14.5,18.26C14.5,19.6 14.5,20.68 14.5,21C14.5,21.27 14.66,21.59 15.17,21.5C19.14,20.16 22,16.42 22,12A10,10 0 0,0 12,2Z" />
@@ -138,7 +123,7 @@
 
           <a href="http://twitter.com/mistermantas">
             <svg class="icon" viewBox="0 0 24 24">
-              <path  d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
+              <path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z" />
             </svg>
           </a>
 
@@ -147,14 +132,44 @@
               <path d="M19.58,12.27C19.54,11.65 19.33,11.18 18.96,10.86C18.59,10.54 18.13,10.38 17.58,10.38C17,10.38 16.5,10.55 16.19,10.89C15.86,11.23 15.65,11.69 15.57,12.27M21.92,12.04C22,12.45 22,13.04 22,13.81H15.5C15.55,14.71 15.85,15.33 16.44,15.69C16.79,15.92 17.22,16.03 17.73,16.03C18.26,16.03 18.69,15.89 19,15.62C19.2,15.47 19.36,15.27 19.5,15H21.88C21.82,15.54 21.53,16.07 21,16.62C20.22,17.5 19.1,17.92 17.66,17.92C16.47,17.92 15.43,17.55 14.5,16.82C13.62,16.09 13.16,14.9 13.16,13.25C13.16,11.7 13.57,10.5 14.39,9.7C15.21,8.87 16.27,8.46 17.58,8.46C18.35,8.46 19.05,8.6 19.67,8.88C20.29,9.16 20.81,9.59 21.21,10.2C21.58,10.73 21.81,11.34 21.92,12.04M9.58,14.07C9.58,13.42 9.31,12.97 8.79,12.73C8.5,12.6 8.08,12.53 7.54,12.5H4.87V15.84H7.5C8.04,15.84 8.46,15.77 8.76,15.62C9.31,15.35 9.58,14.83 9.58,14.07M4.87,10.46H7.5C8.04,10.46 8.5,10.36 8.82,10.15C9.16,9.95 9.32,9.58 9.32,9.06C9.32,8.5 9.1,8.1 8.66,7.91C8.27,7.78 7.78,7.72 7.19,7.72H4.87M11.72,12.42C12.04,12.92 12.2,13.53 12.2,14.24C12.2,15 12,15.64 11.65,16.23C11.41,16.62 11.12,16.94 10.77,17.21C10.37,17.5 9.9,17.72 9.36,17.83C8.82,17.94 8.24,18 7.61,18H2V5.55H8C9.53,5.58 10.6,6 11.23,6.88C11.61,7.41 11.8,8.04 11.8,8.78C11.8,9.54 11.61,10.15 11.23,10.61C11,10.87 10.7,11.11 10.28,11.32C10.91,11.55 11.39,11.92 11.72,12.42M20.06,7.32H15.05V6.07H20.06V7.32Z" />
             </svg>
           </a>
+        </div>
+      </nav>
 
-          <small>
-            <a href="https://github.com/mistermantas/hop-on-discord/blob/master/LICENSE.md">
-              MIT &copy; Mantas Vilčinskas
-            </a>
-          </small>
-        </footer>
-      </aside>
+      <main class="col">
+        <h2 id="what">Wait, what? 🤔</h2>
+
+        <p>Have you ever wanted to link to a Discord server but never knew how to make it prominent enough or keep it light without loading too much crap?
+        Hop on Discord is a simple tool to add a floating action button that links to your Discord server, which looks very similiar to the UI of Discord.</p>
+
+        <p>Here is the beautiful feature list:</p>
+
+        <ul>
+          <li>Pretty freaking beautiful design</li>
+          <li>Very compact (~7kb uncompressed)</li>
+          <li>Simple to add &amp; tweak</li>
+          <li>Dark &amp; light modes</li>
+          <li>Can change accent color</li>
+          <li>Maintainable SCSS using <a href="https://css-tricks.com/bem-101/" rel="nofollow">BEM</a></li>
+          <li>Minimal JavaScript</li>
+          <li>No dependencies</li>
+          <li>Works everywhere</li>
+          <li>No tracking</li>
+        </ul>
+
+        <h2 id="setup">I want it. 🔥</h2>
+
+        <p>For this, you need to know a little bit of HTML.</p>
+
+        <p>On the repo, you will find <em>dark and light mode snippets</em>. Choose whatever you like best. On the site, here, we have dark mode, but for the white mode that <em>doesn't</em> burn your eyes, head over to <a href="https://eggylyte.com">eggylyte.com</a> to see what can be done with light mode and custom colors.</p>
+
+        <p>There's also a source SCSS (Sass) file, so if you're a developer, you can use that to get some sweet looking Discord action.</p>
+
+        <p><a href="https://github.com/mistermantas/hop-on-discord"><strong>Click this linky to go to the GitHub repo! 💻</strong></a></p>
+
+        <p>You can change the images, the text, or anything you want, really. What you see is what you get.</p>
+
+        <p>If you need extra help or want a new feature, <a href="https://github.com/mistermantas/hop-on-discord/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc">create an issue on GitHub</a>. I usually reply swiftly, so do it. Do it. Come on. Do it. Do it! I need to find them bugs! 💥</p>
+      </main>
     </div>
 
 
@@ -167,9 +182,7 @@
       })
     }
     </script>
-    <style>
-      .discord-dialog *,.discord-dialog *:before,.discord-dialog *:after{box-sizing:inherit}.discord-dialog a{text-decoration:none}@keyframes discord-dialog__transition{0%{opacity:0;transform:translateY(16px)}100%{opacity:1;transform:translateY(0)}}.discord-dialog{-webkit-tap-highlight-color:transparent;box-sizing:border-box;display:none;z-index:2147483647;position:fixed;max-width:288px;right:0;bottom:0;margin:18px;background:#2e3136;color:#72767d;box-shadow:0 16px 24px 2px rgba(0,0,0,0.14),0 6px 30px 5px rgba(0,0,0,0.12),0 8px 10px -5px rgba(0,0,0,0.4);transition:opacity 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);animation:discord-dialog__transition 0.2s}.discord-dialog--active{display:block}.discord-dialog__container{font-size:16px;line-height:1.25;color:#99aab5;padding:28px}.discord-dialog__logo{display:none;width:auto;margin-top:5px;height:24px}.discord-dialog__logo path{fill:#fff}.discord-dialog__close-button{position:absolute;right:0;padding:16px;cursor:pointer}.discord-dialog__close-button svg{height:20px;width:20px}.discord-dialog__close-button svg path{fill:#ccc}.discord-dialog__close-button:hover{opacity:0.8}.discord-dialog__close-button:active{opacity:0.4}.discord-dialog__footer{padding:10px 20px}.discord-dialog__footer{border-top:1.5px solid #36393f}.discord-dialog__guild-icon{border-radius:50%;width:64px;display:block;height:auto;margin:16px 0}.discord-dialog__guild{font-size:18px;margin-bottom:12px;color:#fff}.discord-dialog__btn{background:#7289da;color:#fff;text-align:center;display:block;border-radius:1px;margin:8px;font-size:14px;text-transform:uppercase;font-weight:600;padding:4px 16px;position:relative;top:-6px;box-shadow:0 2px 4px rgba(0,0,0,0.4);transition:box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)}.discord-dialog__btn:hover{background:#8095de}.discord-dialog__btn:active{background:#677bc4}.discord-dialog__explainer{display:block;margin:2px 8px;color:#7289da;font-size:12px;position:relative;top:-6px}.discord-dialog__explainer:hover{opacity:0.8}.discord-dialog__explainer:active{opacity:0.6}.discord-button{-webkit-tap-highlight-color:transparent;box-sizing:border-box;display:block;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.24);position:fixed;bottom:0;right:0;z-index:50;margin:17.5px;padding:10.5px;border-radius:50%;height:48px;background:#fff;cursor:pointer;transition:box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)}.discord-button svg{height:28px;width:28px;transition:background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1)}.discord-button svg path{fill:#7289da}.discord-button:hover{background:#d9d9d9;box-shadow:0 3px 6px rgba(0,0,0,0.16),0 3px 6px rgba(0,0,0,0.23)}.discord-button:hover svg path{fill:#6c82cf}.discord-button:active{background:#b3b3b3;box-shadow:0 10px 20px rgba(0,0,0,0.19),0 6px 6px rgba(0,0,0,0.23)}.discord-button:active svg path{fill:#677bc4}
-    </style>
+    <link href="src/css.css" rel="stylesheet">
 
 
     <div class="discord-button" onclick="document.querySelector('.discord-dialog').className = 'discord-dialog discord-dialog--active'">
