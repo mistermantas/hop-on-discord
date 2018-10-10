@@ -7,7 +7,7 @@
 
 > This snippet adds a [floating action button](https://material.io/guidelines/components/buttons-floating-action-button.html) that links to your Discord server! The look of it is quite similiar to the [Intercom live chat button](https://www.intercom.com/), which means many users are familiar with the concept of a chat button. The snippet is styled to imitate the Discord UI and works everywhere.
 
-[**Learn more**](https://hop-on-discord.netlify.com)
+[**Learn more**](https://hop.mnts.lt)
 
 As seen on [Eggylyte.com](https://eggylyte.com)
 
