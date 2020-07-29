@@ -9,8 +9,6 @@
 
 [**Learn more**](https://hop.mnts.lt)
 
-As seen on [Eggylyte.com](https://eggylyte.com)
-
 ## Features 😎
 
 + Pretty freaking beautiful, to be honest
