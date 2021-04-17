@@ -22,6 +22,10 @@
 + Works everywhere
 + No tracking
 
+## Installation
+
+Copy and paste the contents of either snippet-dark.html or snippet-light.html to inside your <body></body>, change some details are it's show time.
+
 ## Contribute ❤
 
 Feel free to make a pull request or open an issue on [GitHub](https://github.com/mistermantas/hop-on-discord).
