@@ -33,9 +33,7 @@ $dark: true;
   }
 }
 
-/**
- * Box
- */
+// Box
 
 .discord-dialog {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -100,25 +98,13 @@ $dark: true;
   &:active { opacity: 0.4; }
 }
 
-/**
- * Box sections
- */
+// Box Sections
 
 .discord-dialog__footer {
   padding: 10px 20px;
 }
 
-// .discord-dialog__footer {
-//   @if $dark == true {
-//     border-top: 1.5px solid #36393f;
-//   } @else {
-//     border-top: 1.5px solid rgba(185,187,190,.3);
-//   }
-// }
-
-/**
- * Box things
- */
+// Box things
 
 .discord-dialog__guild-icon {
   border-radius: 50%;
@@ -152,8 +138,6 @@ $dark: true;
   border-radius: 3px;
   text-align: center;
   padding: 12px 16px;
-  // text-transform: uppercase;
-  // font-weight: 600;
   position: relative;
   top: -6px;
   box-shadow: 0 2px 4px rgba(#000, 0.3);
@@ -168,7 +152,6 @@ $dark: true;
   margin: 2px 8px;
   color: $primary;
   font-size: 12px;
-  // position: relative;
   text-align: right;
   top: -6px;
 
@@ -176,9 +159,7 @@ $dark: true;
   &:active { opacity: 0.6; }
 }
 
-/**
- * Floating action button
- */
+// Action button
 
 .discord-button {
   -webkit-tap-highlight-color: rgba(0,0,0,0);
@@ -207,23 +188,16 @@ $dark: true;
 
 
   &:hover {
-    // background: #fff;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     svg {
       opacity: 0.6;
     }
-    //box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16), 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.23);
-
-    // svg path { fill: mix(#000, $primary, 5%); }
   }
 
   &:active {
-    // background: #b3b3b3;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    //box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.375rem 0.375rem rgba(0, 0, 0, 0.23);
     svg {
       opacity: 0.4;
     }
-    // svg path { fill: mix(#000, $primary, 10%); }
   }
 }
