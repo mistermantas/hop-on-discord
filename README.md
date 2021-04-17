@@ -24,7 +24,7 @@
 
 ## Installation
 
-Copy and paste the contents of either snippet-dark.html or snippet-light.html to inside your <body></body>, change some details are it's show time.
+Copy and paste the contents of either snippet-dark.html or snippet-light.html to inside your <body></body>, change some details and it's show time!
 
 ## Contribute ❤
 
