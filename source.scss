@@ -4,6 +4,9 @@
  * hop-on-discord.netlify.com
  */
 
+// Font
+@import url('http://fonts.cdnfonts.com/css/whitney-2');
+
 // Variables
 $primary: #7289da;
 $dark: true;
@@ -44,6 +47,8 @@ $dark: true;
   right: 0;
   bottom: 0;
   margin: 18px;
+  border-radius: 10px;
+  font-family: 'Whitney', sans-serif;
   @if $dark == true {
     background: #2e3136;
     color: #72767d;
@@ -62,10 +67,10 @@ $dark: true;
 
   // Containers
   &__container {
-    font-size: 16px;
-    line-height: 1.25;
+    font-size: 14px;
+    line-height: 1.2;
     color: #99aab5;
-    padding: 28px;
+    padding: 8px 28px 28px 28px;
   }
 
   // Logo
@@ -103,13 +108,13 @@ $dark: true;
   padding: 10px 20px;
 }
 
-.discord-dialog__footer {
-  @if $dark == true {
-    border-top: 1.5px solid #36393f;
-  } @else {
-    border-top: 1.5px solid rgba(185,187,190,.3);
-  }
-}
+// .discord-dialog__footer {
+//   @if $dark == true {
+//     border-top: 1.5px solid #36393f;
+//   } @else {
+//     border-top: 1.5px solid rgba(185,187,190,.3);
+//   }
+// }
 
 /**
  * Box things
@@ -124,9 +129,10 @@ $dark: true;
 }
 
 .discord-dialog__guild {
-  font-size: 18px;
+  font-size: 24px;
+  line-height: 30px;
   margin-bottom: 12px;
-
+  font-weight: bold;
   @if $dark == true {
     color: #fff;
   } @else {
@@ -141,13 +147,16 @@ $dark: true;
   display: block;
   border-radius: 1px;
   margin: 8px;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-weight: 600;
-  padding: 4px 16px;
+  font-size: 16px;
+  line-height: 24px;
+  border-radius: 3px;
+  text-align: center;
+  padding: 12px 16px;
+  // text-transform: uppercase;
+  // font-weight: 600;
   position: relative;
   top: -6px;
-  box-shadow: 0 2px 4px rgba(#000, 0.4);
+  box-shadow: 0 2px 4px rgba(#000, 0.3);
   transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
   &:hover { background: mix(#fff, $primary, 10%); }
@@ -159,7 +168,8 @@ $dark: true;
   margin: 2px 8px;
   color: $primary;
   font-size: 12px;
-  position: relative;
+  // position: relative;
+  text-align: right;
   top: -6px;
 
   &:hover { opacity: 0.8; }
@@ -183,32 +193,37 @@ $dark: true;
   padding: 10.5px;
   border-radius: 50%;
   height: 48px;
-  background: #fff;
+  background: $primary;
   cursor: pointer;
   transition: box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
   svg {
     height: 28px;
     width: 28px;
     transition: background 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-
-    path { fill: $primary; }
+    path {
+      fill: #fff;
+    }
   }
 
 
   &:hover {
-    background: #d9d9d9;
+    // background: #fff;
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    svg {
+      opacity: 0.6;
+    }
     //box-shadow: 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.16), 0 0.1875rem 0.375rem rgba(0, 0, 0, 0.23);
 
-    svg path { fill: mix(#000, $primary, 5%); }
+    // svg path { fill: mix(#000, $primary, 5%); }
   }
 
   &:active {
-    background: #b3b3b3;
+    // background: #b3b3b3;
     box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
     //box-shadow: 0 0.625rem 1.25rem rgba(0, 0, 0, 0.19), 0 0.375rem 0.375rem rgba(0, 0, 0, 0.23);
-
-    svg path { fill: mix(#000, $primary, 10%); }
+    svg {
+      opacity: 0.4;
+    }
+    // svg path { fill: mix(#000, $primary, 10%); }
   }
 }
